@@ -371,7 +371,7 @@ const Profilebar = ({onRegimeClick,patlis, onAssessmentClick}) => {
   const [notificationCount, setNotificationCount] = useState(0);
 
   useEffect(() => {
-    const socket = new WebSocket("ws://regimeapi.onrender.com/patients");
+    const socket = new WebSocket("wss://regimeapi.onrender.com/patients");
 
     socket.onmessage = (event) => {
       // Handle the WebSocket message
