@@ -17,7 +17,7 @@ export default function VideoCall({onMeetEnd,doctorId}) {
     const fetchPatientInfo = async () => {
       try {
         const response = await fetch(
-          `https://api-backup-vap2.onrender.com/patient-info/${doctorId}`
+          `https://regimeapi.onrender.com/patient-info/${doctorId}`
         );
         const data = await response.json();
 

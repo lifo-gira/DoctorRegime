@@ -78,7 +78,7 @@ const Dashboard = ({
     const fetchData = async () => {
       try {
         const response = await fetch(
-          "https://api-backup-vap2.onrender.com/patient-details/all"
+          "https://regimeapi.onrender.com/patient-details/all"
         );
         if (!response.ok) {
           throw new Error("Failed to fetch data");

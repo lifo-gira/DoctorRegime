@@ -99,7 +99,7 @@ const Profilebar = ({onRegimeClick,patlis, onAssessmentClick}) => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch("https://api-backup-vap2.onrender.com/patient-details/all");
+        const response = await fetch("https://regimeapi.onrender.com/patient-details/all");
         if (!response.ok) {
           throw new Error("Failed to fetch data");
         }
@@ -371,7 +371,7 @@ const Profilebar = ({onRegimeClick,patlis, onAssessmentClick}) => {
   const [notificationCount, setNotificationCount] = useState(0);
 
   useEffect(() => {
-    const socket = new WebSocket("ws://api-backup-vap2.onrender.com/patients");
+    const socket = new WebSocket("ws://regimeapi.onrender.com/patients");
 
     socket.onmessage = (event) => {
       // Handle the WebSocket message
