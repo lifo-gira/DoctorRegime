@@ -623,7 +623,7 @@ const Regimebuilder = ({ onProfileClick, userId }) => {
               //     backgroundColor: activeMenuItem === "Dashboard" && activeMenuItem != "Report" ? "cyan" : "transparent",
               //   }}
             >
-              <div className={`flex flex-row mx-auto `}>
+              {/* <div className={`flex flex-row mx-auto `}>
                 <ListItemPrefix
                   onClick={onProfileClick}
                   className="cursor-pointer"
@@ -638,7 +638,7 @@ const Regimebuilder = ({ onProfileClick, userId }) => {
                 >
                   Dashboard
                 </Typography>
-              </div>
+              </div> */}
             </ListItem>
             <ListItem
               className={`${
@@ -651,7 +651,7 @@ const Regimebuilder = ({ onProfileClick, userId }) => {
               //   }}
               onClick={() => openDrawerRight()}
             >
-              <div className={`flex flex-row mx-auto `}>
+              {/* <div className={`flex flex-row mx-auto `}>
                 <ListItemPrefix className="cursor-pointer">
                   <AdjustmentsHorizontalIcon className="h-5 w-5" />
                 </ListItemPrefix>
@@ -662,12 +662,13 @@ const Regimebuilder = ({ onProfileClick, userId }) => {
                 >
                   Categories
                 </Typography>
-              </div>
+              </div> */}
             </ListItem>
             <ListItem
               className={`${
                 screenWidth < 640 ? "w-3/4 text-center" : " w-1/3 p-1 "
               }`}
+              onClick={() => openDrawerRight()}
               //   selected={open === 1}
               //   onClick={() => handleItemClick(1)}
               //   style={{
@@ -676,14 +677,14 @@ const Regimebuilder = ({ onProfileClick, userId }) => {
             >
               <div className={`flex flex-row mx-auto `}>
                 <ListItemPrefix className="cursor-pointer">
-                  <ArrowLeftStartOnRectangleIcon className="h-5 w-5" />
+                <AdjustmentsHorizontalIcon className="h-5 w-5" />
                 </ListItemPrefix>
                 <Typography
                   variant="h5"
                   color="blue-gray"
                   className="mr-auto font-normal cursor-pointer"
                 >
-                  Sign Out
+                 Categories
                 </Typography>
               </div>
             </ListItem>

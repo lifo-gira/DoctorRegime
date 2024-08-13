@@ -180,7 +180,7 @@ const Dashboard = ({
     <div className={`w-full h-full`}>
       <div
         className={`w-full  ${
-          screenWidth < 1200 ? "flex flex-col h-full" : "flex flex-row h-3/5"
+          screenWidth < 1200 ? "flex flex-col h-full" : "flex flex-row justify-center h-3/5"
         }`}
       >
         <div
@@ -537,7 +537,7 @@ const Dashboard = ({
             </div>
           </div>
         </div>
-        <div
+        {/* <div
           className={`h-full  flex flex-col ${
             screenWidth < 1200 ? "w-full" : "w-2/5"
           }`}
@@ -676,9 +676,9 @@ const Dashboard = ({
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
-      <div
+      {/* <div
         className={`w-full h-2/5 flex flex-col ${
           screenWidth < 1200 ? "py-4 gap-4 px-2" : "px-6 pb-2"
         } `}
@@ -708,7 +708,7 @@ const Dashboard = ({
             />
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 };

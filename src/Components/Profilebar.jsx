@@ -105,6 +105,7 @@ const Profilebar = ({onRegimeClick,patlis, onAssessmentClick}) => {
         }
         const data = await response.json();
         setPatients(data);
+        console.log(data)
         setLoading(false);
 
         // Count occurrences of flag == -1 and flag == 0
@@ -459,52 +460,6 @@ const Profilebar = ({onRegimeClick,patlis, onAssessmentClick}) => {
                   Dashboard
                 </Typography>
               </ListItem>
-              <ListItem
-                className={`rounded-none font-poppins ${
-                  screenWidth < 1535 ? "w-2/3 px-4" : " w-full p-3"
-                } ${activeMenuItem === "Patient List" ? "bg-gradient-to-r from-white to-cyan-200" : "transparent"}`}
-                selected={open === 2}
-                onClick={() => handleItemClick(2)}
-              >
-                <ListItemPrefix>
-                  <UsersIcon className="h-5 w-5" />
-                </ListItemPrefix>
-                Patient List
-              </ListItem>
-              
-              <ListItem
-                className={`rounded-none font-poppins ${
-                  screenWidth < 1535 ? "w-2/3 px-4" : " w-full p-3"
-                } ${activeMenuItem === "Schedule" ? "bg-gradient-to-r from-white to-cyan-200" : "transparent" }`}
-                selected={open === 3}
-                onClick={() => handleItemClick(3)}
-              >
-                <ListItemPrefix>
-                  <CalendarDaysIcon className="h-5 w-5" />
-                </ListItemPrefix>
-                Schedule
-              </ListItem>
-              <hr className="my-5 border-blue-gray-50 w-full" />
-              <ListItem
-                className={`rounded-none font-poppins ${
-                  screenWidth < 1535 ? "w-2/3 px-4" : " w-full p-3"
-                }`}
-              >
-                <ListItemPrefix>
-                  <Cog6ToothIcon className="h-5 w-5" />
-                </ListItemPrefix>
-                Settings
-              </ListItem>
-              <ListItem
-                className={`rounded-none font-poppins ${
-                  screenWidth < 1535 ? "w-2/3 px-4" : " w-full p-3"
-                }`}
-              >
-                <ListItemPrefix>
-                  <PowerIcon className="h-5 w-5" />
-                </ListItemPrefix>
-                Log Out
-              </ListItem>
             </List>
           </Card>
         </div>
@@ -572,60 +527,6 @@ const Profilebar = ({onRegimeClick,patlis, onAssessmentClick}) => {
                   >
                     Dashboard
                   </Typography>
-                </ListItem>
-                <ListItem
-                  className={`${
-                    screenWidth < 1535 ? "w-5/6 px-4" : " w-full p-3"
-                  } ${activeMenuItem === "Patient List"
-                  ? "bg-gradient-to-r from-white to-cyan-200"
-                  : "transparent"}`}
-                  selected={open === 2}
-                  onClick={() => handleItemClick(2)}
-                >
-                  <ListItemPrefix>
-                    <UsersIcon className="h-5 w-5" />
-                  </ListItemPrefix>
-                  Patient List
-                </ListItem>
-                <ListItem
-                  className={`${
-                    screenWidth < 1535 ? "w-5/6 px-4" : " w-full p-3"
-                  } ${activeMenuItem === "Schedule"
-                  ? "bg-gradient-to-r from-white to-cyan-200"
-                  : "transparent"}`}
-                  selected={open === 3}
-                  onClick={() => handleItemClick(3)}
-                >
-                  <ListItemPrefix>
-                    <CalendarDaysIcon className="h-5 w-5" />
-                  </ListItemPrefix>
-                  Schedule
-                </ListItem>
-
-                <hr
-                  className={` border-blue-gray-50 w-full ${
-                    screenWidth < 1535 ? "my-2" : " my-5"
-                  }`}
-                />
-                <ListItem
-                  className={`${
-                    screenWidth < 1535 ? "w-5/6 px-4" : " w-full p-3"
-                  }`}
-                >
-                  <ListItemPrefix>
-                    <Cog6ToothIcon className="h-5 w-5" />
-                  </ListItemPrefix>
-                  Settings
-                </ListItem>
-                <ListItem
-                  className={`${
-                    screenWidth < 1535 ? "w-5/6 px-4" : " w-full p-3"
-                  }`}
-                >
-                  <ListItemPrefix>
-                    <PowerIcon className="h-5 w-5" />
-                  </ListItemPrefix>
-                  Log Out
                 </ListItem>
               </List>
             </Card>
